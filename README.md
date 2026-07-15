@@ -1,2 +1,2 @@
-# APP_RH HEXAGONAL
+# AppRh Arquitetura HEXAGONAL
 
