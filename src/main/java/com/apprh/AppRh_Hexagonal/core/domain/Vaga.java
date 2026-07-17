@@ -1,22 +1,21 @@
 package com.apprh.AppRh_Hexagonal.core.domain;
 
 import java.math.BigDecimal;
+import java.time.LocalDate;
 
 public class Vaga {
 
     private Long id;
-    private String nome;
     private String descricao;
     private BigDecimal salario;
     private Boolean status; // true = aberta; false = fechada
-    private String dataCadastro;
+    private LocalDate dataCadastro;
 
     public Vaga() {
     }
 
-    public Vaga(Long id, String nome, String descricao, BigDecimal salario, Boolean status, String dataCadastro) {
+    public Vaga(Long id, String descricao, BigDecimal salario, Boolean status, LocalDate dataCadastro) {
         this.id = id;
-        this.nome = nome;
         this.descricao = descricao;
         this.salario = salario;
         this.status = status;
@@ -29,14 +28,6 @@ public class Vaga {
 
     public void setId(Long id) {
         this.id = id;
-    }
-
-    public String getNome() {
-        return nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
     }
 
     public String getDescricao() {
@@ -64,11 +55,11 @@ public class Vaga {
         this.status = status;
     }
 
-    public String getDataCadastro() {
+    public LocalDate getDataCadastro() {
         return dataCadastro;
     }
 
-    public void setDataCadastro(String dataCadastro) {
+    public void setDataCadastro(LocalDate dataCadastro) {
         this.dataCadastro = dataCadastro;
     }
 }
