@@ -6,4 +6,6 @@ import java.util.Collection;
 
 public interface VagaServicePort {
     Collection<Vaga> getAllVagas();
+    Vaga criarVaga(Vaga vaga);
+
 }
