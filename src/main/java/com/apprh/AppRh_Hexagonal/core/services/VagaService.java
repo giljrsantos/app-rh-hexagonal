@@ -18,4 +18,9 @@ public class VagaService implements VagaServicePort {
     public Collection<Vaga> getAllVagas(){
         return vagaRepositoryPort.getAllVagas();
     }
+
+    @Override
+    public Vaga criarVaga(Vaga vaga){
+        return vagaRepositoryPort.create(vaga);
+    }
 }
