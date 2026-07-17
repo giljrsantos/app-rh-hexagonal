@@ -9,6 +9,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
+import java.time.LocalDate;
+
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
@@ -19,10 +21,9 @@ public class VagaEntity {
     @Id
     @GeneratedValue
     private Long id;
-    private String nome;
     private String descricao;
     private BigDecimal salario;
     private Boolean status; // true = aberta; false = fechada
-    private String dataCadastro;
+    private LocalDate dataCadastro;
 
 }
