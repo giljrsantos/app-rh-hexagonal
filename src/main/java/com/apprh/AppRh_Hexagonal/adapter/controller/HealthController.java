@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("api/")
 @RequiredArgsConstructor
-public class HeathController {
+public class HealthController {
 
     @GetMapping("health")
     @ResponseStatus(HttpStatus.OK)
