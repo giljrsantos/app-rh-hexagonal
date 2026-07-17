@@ -9,7 +9,6 @@ public class VagaConverter {
     public Vaga toDomain (VagaDto vagaDto){
         return new Vaga(
             vagaDto.getId(),
-            vagaDto.getNome(),
             vagaDto.getDescricao(),
             vagaDto.getSalario(),
             vagaDto.getStatus(),
@@ -20,7 +19,6 @@ public class VagaConverter {
     public VagaDto toDto(Vaga vaga){
         return new VagaDto(
                 vaga.getId(),
-                vaga.getNome(),
                 vaga.getDescricao(),
                 vaga.getSalario(),
                 vaga.getStatus(),
