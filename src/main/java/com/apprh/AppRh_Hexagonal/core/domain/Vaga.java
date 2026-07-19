@@ -10,16 +10,18 @@ public class Vaga {
     private BigDecimal salario;
     private Boolean status; // true = aberta; false = fechada
     private LocalDate dataCadastro;
+    private LocalDate dataAtualizacao;
 
     public Vaga() {
     }
 
-    public Vaga(Long id, String descricao, BigDecimal salario, Boolean status, LocalDate dataCadastro) {
+    public Vaga(Long id, String descricao, BigDecimal salario, Boolean status, LocalDate dataCadastro, LocalDate dataAtualizacao) {
         this.id = id;
         this.descricao = descricao;
         this.salario = salario;
         this.status = status;
         this.dataCadastro = dataCadastro;
+        this.dataAtualizacao = dataAtualizacao;
     }
 
     public Long getId() {
@@ -61,5 +63,13 @@ public class Vaga {
 
     public void setDataCadastro(LocalDate dataCadastro) {
         this.dataCadastro = dataCadastro;
+    }
+
+    public LocalDate getDataAtualizacao() {
+        return dataAtualizacao;
+    }
+
+    public void setDataAtualizacao(LocalDate dataAtualizacao) {
+        this.dataAtualizacao = dataAtualizacao;
     }
 }
