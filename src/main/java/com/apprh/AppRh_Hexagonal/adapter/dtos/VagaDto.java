@@ -17,5 +17,6 @@ public class VagaDto {
     private BigDecimal salario;
     private Boolean status; // true = aberta; false = fechada
     private LocalDate dataCadastro;
+    private LocalDate dataAtualizacao;
 
 }
