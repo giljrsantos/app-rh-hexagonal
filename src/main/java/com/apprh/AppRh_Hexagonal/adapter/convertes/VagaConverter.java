@@ -12,7 +12,8 @@ public class VagaConverter {
             vagaDto.getDescricao(),
             vagaDto.getSalario(),
             vagaDto.getStatus(),
-            vagaDto.getDataCadastro()
+            vagaDto.getDataCadastro(),
+            vagaDto.getDataAtualizacao()
         );
     }
 
@@ -22,7 +23,8 @@ public class VagaConverter {
                 vaga.getDescricao(),
                 vaga.getSalario(),
                 vaga.getStatus(),
-                vaga.getDataCadastro()
+                vaga.getDataCadastro(),
+                vaga.getDataAtualizacao()
         );
     }
 }
