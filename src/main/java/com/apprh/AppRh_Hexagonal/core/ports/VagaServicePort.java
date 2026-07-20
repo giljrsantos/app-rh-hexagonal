@@ -8,4 +8,5 @@ public interface VagaServicePort {
     Collection<Vaga> getAllVagas();
     Vaga criarVaga(Vaga vaga);
 
+    Vaga getById(Long id);
 }
