@@ -29,6 +29,14 @@ public class VagaController {
                 .collect(Collectors.toList());
     }
 
+    // Lista uma vaga pelo ID
+    @GetMapping("/{id}")
+    @ResponseStatus(HttpStatus.OK)
+    public VagaDto getById(@PathVariable Long id){
+        Vaga vaga = vagaServicePort.getById(id);
+        return vagaConverter.toDto(vaga);
+    }
+
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     public VagaDto criarVaga(@RequestBody VagaDto vagaDto) {
