@@ -1,6 +1,7 @@
 package com.apprh.AppRh_Hexagonal.core.services;
 
 import com.apprh.AppRh_Hexagonal.core.domain.Vaga;
+import com.apprh.AppRh_Hexagonal.core.exception.BusinessNotFoundException;
 import com.apprh.AppRh_Hexagonal.core.ports.VagaRepositoryPort;
 import com.apprh.AppRh_Hexagonal.core.ports.VagaServicePort;
 
@@ -17,6 +18,12 @@ public class VagaService implements VagaServicePort {
     @Override
     public Collection<Vaga> getAllVagas(){
         return vagaRepositoryPort.getAllVagas();
+    }
+
+    @Override
+    public Vaga getById(Long id){
+        return vagaRepositoryPort.getById(id)
+                .orElseThrow(() -> new BusinessNotFoundException("Vaga não encontrada com esse ID: " + id));
     }
 
     @Override
