@@ -8,6 +8,7 @@ import org.springframework.stereotype.Component;
 import org.modelmapper.ModelMapper;
 
 import java.util.Collection;
+import java.util.Optional;
 
 @Component
 @RequiredArgsConstructor
@@ -29,6 +30,11 @@ public class VagaRepositoryAdapter implements VagaRepositoryPort {
                 .stream()
                 .map(vagaEntity -> modelMapper.map(vagaEntity, Vaga.class))
                 .toList();
+    }
+
+    @Override
+    public Optional<Vaga> getById(Long id){
+        return vagaRepository.findById(id).map(vagaEntity -> modelMapper.map(vagaEntity, Vaga.class));
     }
 
 }
