@@ -1,4 +1,4 @@
-package com.apprh.AppRh_Hexagonal.infra.handlers;
+package com.apprh.AppRh_Hexagonal.infra;
 
 import com.apprh.AppRh_Hexagonal.core.ports.VagaRepositoryPort;
 import com.apprh.AppRh_Hexagonal.core.ports.VagaServicePort;
