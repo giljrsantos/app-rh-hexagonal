@@ -44,4 +44,11 @@ public class VagaController {
         return vagaConverter.toDto(novaVaga);
     }
 
+    @PutMapping("/{id}")
+    @ResponseStatus(HttpStatus.OK)
+    public VagaDto updateVaga(@PathVariable Long id, @RequestBody VagaDto vagaDto){
+        Vaga vaga = vagaServicePort.updateVaga(id, vagaConverter.toDomain((vagaDto)));
+        return vagaConverter.toDto(vaga);
+    }
+
 }
