@@ -10,4 +10,5 @@ public interface VagaRepositoryPort {
     public Collection<Vaga> getAllVagas();
     public Optional<Vaga> getById(Long id);
 
+    public Vaga update(Vaga vaga);
 }
