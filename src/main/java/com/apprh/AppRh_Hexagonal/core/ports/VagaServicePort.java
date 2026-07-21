@@ -9,4 +9,6 @@ public interface VagaServicePort {
     Vaga criarVaga(Vaga vaga);
 
     Vaga getById(Long id);
+
+    Vaga updateVaga(Long id, Vaga vaga);
 }
