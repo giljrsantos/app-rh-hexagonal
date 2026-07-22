@@ -4,6 +4,7 @@ import com.apprh.AppRh_Hexagonal.core.domain.Vaga;
 import com.apprh.AppRh_Hexagonal.core.exception.BusinessNotFoundException;
 import com.apprh.AppRh_Hexagonal.core.ports.VagaRepositoryPort;
 import com.apprh.AppRh_Hexagonal.core.ports.VagaServicePort;
+import org.springframework.http.ResponseEntity;
 
 import java.util.Collection;
 
@@ -49,5 +50,13 @@ public class VagaService implements VagaServicePort {
         vagaExistente.setSalario(vaga.getSalario());
         vagaExistente.setStatus(vaga.getStatus());
         return vagaRepositoryPort.update(vagaExistente);
+    }
+
+    @Override
+    public void delete(Long id){
+        // verifica se a vaga existe
+        this.getById(id);
+        // se chegou aqui, a vaga existe e vai ser deletado
+        vagaRepositoryPort.delete(id);
     }
 }
