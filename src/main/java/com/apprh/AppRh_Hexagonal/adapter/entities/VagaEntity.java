@@ -14,11 +14,11 @@ import java.time.LocalDate;
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-@Table(name = "tb_vaga")
+@Table(name = "tb_vagas")
 public class VagaEntity {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String descricao;
     private BigDecimal salario;
