@@ -38,6 +38,7 @@ public class VagaRepositoryAdapter implements VagaRepositoryPort {
         return vagaRepository.findById(id).map(vagaEntity -> modelMapper.map(vagaEntity, Vaga.class));
     }
 
+    @Override
     public Vaga update(Vaga vaga){
         VagaEntity entity = modelMapper.map(vaga, VagaEntity.class);
 
@@ -54,6 +55,10 @@ public class VagaRepositoryAdapter implements VagaRepositoryPort {
 
         VagaEntity update = vagaRepository.save(entity);
         return modelMapper.map(update, Vaga.class);
+    }
+    @Override
+    public void delete(Long id){
+        vagaRepository.deleteById(id);
     }
 
 }
