@@ -11,4 +11,6 @@ public interface VagaRepositoryPort {
     public Optional<Vaga> getById(Long id);
 
     public Vaga update(Vaga vaga);
+
+    public void delete(Long id);
 }
