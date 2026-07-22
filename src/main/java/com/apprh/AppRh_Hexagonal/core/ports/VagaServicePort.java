@@ -11,4 +11,6 @@ public interface VagaServicePort {
     Vaga getById(Long id);
 
     Vaga updateVaga(Long id, Vaga vaga);
+
+    void delete(Long id);
 }
