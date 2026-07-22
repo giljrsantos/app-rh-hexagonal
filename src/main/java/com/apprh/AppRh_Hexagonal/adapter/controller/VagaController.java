@@ -51,4 +51,10 @@ public class VagaController {
         return vagaConverter.toDto(vaga);
     }
 
+    @DeleteMapping("/{id}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public void deleteVaga(@PathVariable Long id){
+        vagaServicePort.delete(id);
+    }
+
 }
