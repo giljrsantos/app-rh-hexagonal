@@ -9,6 +9,7 @@ import org.hibernate.annotations.UpdateTimestamp;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 @Entity
 @AllArgsConstructor
@@ -18,8 +19,9 @@ import java.time.LocalDate;
 public class VagaEntity {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    private String titulo;
     private String descricao;
     private BigDecimal salario;
     private Boolean status; // true = aberta; false = fechada
@@ -30,6 +32,6 @@ public class VagaEntity {
 
     @UpdateTimestamp
     @Column(name = "dataAtualizacao")
-    private LocalDate dataAtualizacao;
+    private LocalDateTime dataAtualizacao;
 
 }
