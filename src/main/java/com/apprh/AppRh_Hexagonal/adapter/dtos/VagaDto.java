@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 @NoArgsConstructor
 @AllArgsConstructor
@@ -13,10 +14,11 @@ import java.time.LocalDate;
 public class VagaDto {
 
     private Long id;
+    private String titulo;
     private String descricao;
     private BigDecimal salario;
     private Boolean status; // true = aberta; false = fechada
     private LocalDate dataCadastro;
-    private LocalDate dataAtualizacao;
+    private LocalDateTime dataAtualizacao;
 
 }
